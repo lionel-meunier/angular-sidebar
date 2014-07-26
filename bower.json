@@ -1,0 +1,21 @@
+{
+  "name": "angular-sidebar",
+  "version": "0.0.0",
+  "dependencies": {
+    "underscore": "^1.6.0",
+    "angular": "^v1.3.0",
+    "jquery":"^2.1.1"
+  },
+  "authors": [
+    "Meunier Lionel <lmeunier@iocean.fr>"
+  ],
+  "description": "Sidebar for site angular",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

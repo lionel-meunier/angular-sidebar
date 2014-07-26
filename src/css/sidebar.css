@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 juil. 2014, 11:55:10
+    Author     : Lionel
+*/
+
+
+.sidebar-content {
+    position : relative;
+    overflow: hidden;
+}
+.sidebar-content .sidebar-left,
+.sidebar-content .sidebar-right {
+    position : absolute;
+    top : 0;
+    bottom : 0;
+    width : 200px;
+}
+.sidebar-content .sidebar-left {
+    left: -200px;
+    transition: left 1s;
+}
+.sidebar-content .sidebar-left.open {
+    left : 0;
+}
+.sidebar-content .sidebar-right {
+    right: -200px;
+    transition: right 1s;
+}
+.sidebar-content .sidebar-right.open {
+    right: 0;
+}
+
+.sidebar-content .sidebar-left-button,
+.sidebar-content .sidebar-right-button {
+    position : absolute;
+    top : 0;
+    width : 50px;
+}
+.sidebar-content .sidebar-center {
+    margin : 0 50px;
+}
+.sidebar-content .sidebar-left-button {
+    left : 0;
+    transition: left 1s;
+}
+.sidebar-content .sidebar-right-button {
+    right : 0;
+    transition: right 1s;
+}
+.sidebar-content .sidebar-left-button.open {
+    left : 200px;
+}
+.sidebar-content .sidebar-right-button.open {
+    right : 200px;
+}
+body {
+    margin : 0;
+}
