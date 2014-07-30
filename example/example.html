@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Example Sidebar</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../src/css/sidebar.css" media="all" rel="stylesheet" type="text/css">
@@ -9,14 +9,15 @@
         <script src="../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
         <script src="../bower_components/angular/angular.js" type="text/javascript"></script>
         <script src="../src/script/module.js" type="text/javascript"></script>
+        <script src="../src/script/sidebar.js" type="text/javascript"></script>
+        <script src="../src/script/sidebarLeft.js" type="text/javascript"></script>
     </head>
     <body ng-app="lme-sidebar">
         
-        <div sidebar-content>
-            <div sidebar-left>Left</div>
-            <div sidebar-left="leftOptions2">Contenu Left</div>
-            <div sidebar-right>Right</div>
-            <div>Center</div>
+        <div sidebar>
+            Le contenu comme on veut qui ne bouge pas
+            <div sidebar-l>Mettre ce contenu dans la sidebar Left</div>
+            <div sidebar-l>Mettre ce contenu dans la sidebar Left22</div>
         </div>
     </body>
 </html>
