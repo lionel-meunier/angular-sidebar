@@ -17,20 +17,19 @@
             angular.module('lme-sidebar').controller('sidebarCtrl',['$scope',function($scope){
                 $scope.sidebarLeftConf = {
                     open : true
-                };   
+                };
             }]);
         </script>
     </head>
-    <body ng-app="lme-sidebar" ng-controller="sidebarCtrl">
+    <body ng-app="lme-sidebar">
 
-        <div class="sidebar-content" >
-            <div sidebar-left="sidebarLeftConf">
+        <div class="sidebar-content sidebar-fixed" ng-controller="sidebarCtrl">
+             <div sidebar-left="sidebarLeftConf">
                 <div  sidebar-btn-open class="btn btn-default">Override inner btn</div>
                 Content transcluded in left sidebar
             </div>
             <div sidebar-right="sidebarRightConf">Content transcluded in right sidebar</div>
             Content center compatible with ng-view
-        </div
-        
+        </div>
     </body>
 </html>

@@ -12,52 +12,78 @@ and open the template in the editor.
 .sidebar-content {
     position : relative;
     overflow: hidden;
+    min-height : 600px;
 }
 .sidebar-left,
-.sidebar-right {
+.sidebar-left-content,
+.sidebar-right,
+.sidebar-right-content {
     position : absolute;
     top : 0;
     bottom : 0;
     width : 200px;
 }
-.sidebar-left {
+.sidebar-fixed .sidebar-left,
+.sidebar-fixed .sidebar-left-content,
+.sidebar-fixed .sidebar-right,
+.sidebar-fixed .sidebar-right-content{
+    position : fixed;
+}
+
+.sidebar-left,
+.sidebar-left-content {
     left: -200px;
     transition: left 1s;
 }
-.sidebar-left.open {
+.sidebar-left.open,
+.sidebar-left-content.open {
     left : 0;
 }
-.sidebar-right {
+.sidebar-right,
+.sidebar-right-content {
     right: -200px;
     transition: right 1s;
 }
-.sidebar-right.open {
+.sidebar-right.open,
+.sidebar-right-content.open {
     right: 0;
 }
-
-.sidebar-btn {
+.sidebar-btn-content,
+.sidebar-btn-open {
     position : absolute;
     top : 0;
-    width : 50px;
-    cursor : pointer;
 }
-
-.sidebar-btn-left {
+.sidebar-btn-content.sidebar-btn-left-content,
+.sidebar-btn-open.sidebar-btn-left {
     left : 0;
     transition: left 1s;
 }
-.sidebar-btn-right  {
+.sidebar-btn-content.sidebar-btn-right-content,
+.sidebar-btn-open.sidebar-btn-right  {
     right : 0;
     transition: right 1s;
 }
-.sidebar-btn-left.open {
+.sidebar-btn-content.sidebar-btn-left-content.open,
+.sidebar-btn-open.sidebar-btn-left.open {
     left : 200px;
 }
-.sidebar-btn-right.open {
+.sidebar-btn-content.sidebar-btn-right-content.open,
+.sidebar-btn-open.sidebar-btn-right.open {
     right : 200px;
 }
 body {
     margin : 0;
 }
 
-
+/**Partie multiple**/
+.sidebar-btn-left-content .sidebar-btn-open,
+.sidebar-btn-right-content .sidebar-btn-open{
+    position : static;
+    width : auto;
+}
+.sidebar-content.pinned-left.open-left {
+    padding-left : 200px;
+}
+.sidebar-content.pinned-right.open-right {
+    padding-right : 200px;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example Sidebar</title>
+        <title>Example Sidebar Multiple</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../bower_components/bootstrap/dist/css/bootstrap.css" media="all" rel="stylesheet" type="text/css">
@@ -16,21 +16,53 @@
         <script type="text/javascript">
             angular.module('lme-sidebar').controller('sidebarCtrl',['$scope',function($scope){
                 $scope.sidebarLeftConf = {
+                    open : true,
+                    showOpen : false
+                };  
+                $scope.sidebarLeft2Conf = {
                     open : true
-                };   
+                };  
+                $scope.sidebarConf = {
+                    left : {
+                        pinned : true,
+                    },
+                    right : {
+                        pinned : false
+                    }
+                }; 
             }]);
         </script>
+        <style>
+            .marge-button {
+                margin : 0 50px;
+            }
+        </style>
     </head>
     <body ng-app="lme-sidebar" ng-controller="sidebarCtrl">
 
-        <div class="sidebar-content" >
+        <div sidebar="sidebarConf" class="sidebar-fixed">
             <div sidebar-left="sidebarLeftConf">
-                <div  sidebar-btn-open class="btn btn-default">Override inner btn</div>
+                
                 Content transcluded in left sidebar
+                
             </div>
-            <div sidebar-right="sidebarRightConf">Content transcluded in right sidebar</div>
-            Content center compatible with ng-view
-        </div
+            <div sidebar-left="sidebarLeft2Conf">
+                Content transcluded in left22 sidebar
+                {{sidebarLeft2Conf.open}}
+            </div>
+            <div sidebar-right="">
+                Test1
+            </div>
+            <div sidebar-right="">
+                Test2
+            </div>
+            <div sidebar-right="">
+                Test3
+            </div>
+            <div class="well marge-button">
+                Content center compatible with ng-view
+            </div>
+        </div>
         
     </body>
 </html>
