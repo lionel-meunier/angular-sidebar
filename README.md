@@ -7,5 +7,5 @@ Sidebar dev
 TODO
 ====
 
-add test karma
-add test protractor
+*add test karma
+*add test protractor
